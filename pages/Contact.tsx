@@ -7,23 +7,34 @@ const Contact: React.FC = () => {
   const [isSent, setIsSent] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate backend processing
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-    
-    console.log("Simulating email send to control@metrosecure.co.uk...", data);
-    
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const formData = new FormData(e.currentTarget);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to send message");
+    }
+
     setIsSent(true);
-    
-    setTimeout(() => setIsSent(false), 5000);
     (e.target as HTMLFormElement).reset();
-  };
+  } catch (err) {
+    alert("Failed to send message. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+    setTimeout(() => setIsSent(false), 5000);
+  }
+};
 
   return (
     <div className="bg-white">

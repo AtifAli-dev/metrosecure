@@ -1,12 +1,13 @@
-
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import SecurityServices from './pages/SecurityServices';
-import CleaningServices from './pages/CleaningServices';
+import CleaningServices from './pages/CleaningServices'; // Main selection page
+import DomesticCleaning from './pages/DomesticCleaning'; // New separate page
+import CommercialCleaning from './pages/CommercialCleaning'; // New separate page
 import Areas from './pages/Areas';
 import Contact from './pages/Contact';
 import AiAssistant from './components/AiAssistant';
@@ -30,7 +31,12 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/security" element={<SecurityServices />} />
+            
+            {/* Cleaning Routes */}
             <Route path="/cleaning" element={<CleaningServices />} />
+            <Route path="/cleaning/domestic" element={<DomesticCleaning />} />
+            <Route path="/cleaning/commercial" element={<CommercialCleaning />} />
+            
             <Route path="/areas" element={<Areas />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

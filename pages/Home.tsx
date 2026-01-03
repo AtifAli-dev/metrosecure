@@ -7,16 +7,19 @@ const carouselItems = [
     image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=1600&h=900&auto=format&fit=crop',
     title: 'Manned Security Services',
     description: 'Reliable, fully trained officers standing ready to shield your business and assets.',
+    link: '/security', // ✅ Link to security page
   },
   {
     image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6954?q=80&w=1600&h=900&auto=format&fit=crop',
     title: 'Domestic Cleaning',
     description: 'Trusted, screened professionals dedicated to turning your home into a peaceful sanctuary.',
+    link: '/cleaning', // ✅ Link to cleaning page
   },
   {
     image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1600&h=900&auto=format&fit=crop',
     title: 'Commercial Cleaning',
     description: 'Highly trained experts creating an attractive, hygienic, and secure environment for your brand.',
+    link: '/cleaning', // ✅ You can change this to a separate commercial cleaning page if you have one
   },
 ];
 
@@ -57,7 +60,7 @@ const Home: React.FC = () => {
                 {item.description}
               </p>
               <Link
-                to="/about"
+                to={item.link}
                 className="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded font-bold uppercase tracking-wider transition-all transform hover:-translate-y-1 shadow-lg"
               >
                 Learn More
