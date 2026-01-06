@@ -10,13 +10,13 @@ const carouselItems = [
     link: '/security', // ✅ Link to security page
   },
   {
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6954?q=80&w=1600&h=900&auto=format&fit=crop',
+    image: 'https://res.cloudinary.com/dyb9eyvex/image/upload/v1767695516/deomostic_cleaning_a7kwly.png',
     title: 'Domestic Cleaning',
     description: 'Trusted, screened professionals dedicated to turning your home into a peaceful sanctuary.',
     link: '/cleaning', // ✅ Link to cleaning page
   },
   {
-    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1600&h=900&auto=format&fit=crop',
+    image: 'https://res.cloudinary.com/dyb9eyvex/image/upload/v1767699829/commerical_cleaning_pa9ycr.png',
     title: 'Commercial Cleaning',
     description: 'Highly trained experts creating an attractive, hygienic, and secure environment for your brand.',
     link: '/cleaning', // ✅ You can change this to a separate commercial cleaning page if you have one
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section Carousel */}
-      <section className="relative h-[80vh] w-full overflow-hidden">
+      <section className="relative h-[80vh] top-6 w-full overflow-hidden">
         {carouselItems.map((item, index) => (
           <div
             key={index}

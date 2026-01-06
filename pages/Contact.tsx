@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 
+
 const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSent, setIsSent] = useState(false);
@@ -14,7 +15,7 @@ const Contact: React.FC = () => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const res = await fetch("/api/contact", {
+    const res = await fetch("/api/contact.ts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +79,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-secondary">Address</h4>
-                      <p className="text-gray-600">Greenwood House, Mitchem, London</p>
+                      <p className="text-gray-600">86 Edgehill Road, Mitcham, London, CR4 2HW</p>
                     </div>
                   </div>
                 </div>
@@ -89,7 +90,7 @@ const Contact: React.FC = () => {
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex justify-between">
                     <span>Office:</span>
-                    <span>Mon - Fri, 9am - 5pm</span>
+                    <span>Mon - Fri, 8am - 6pm</span>
                   </div>
                   <div className="flex justify-between font-bold text-primary">
                     <span>Operational:</span>
@@ -193,7 +194,7 @@ const Contact: React.FC = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-white px-8 py-4 rounded-full shadow-2xl border-2 border-primary flex items-center space-x-3">
              <MapPin className="text-primary" />
-             <span className="font-bold text-secondary">Greenwood House, Mitchem, London</span>
+             <span className="font-bold text-secondary">86 Edgehill Road, Mitcham, London, CR4 2HW</span>
           </div>
         </div>
       </section>
