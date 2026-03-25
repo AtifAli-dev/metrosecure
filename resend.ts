@@ -1,6 +1,6 @@
 
 import { BookingState, EXTRA_TASKS } from './type';
-
+import { Resend } from 'resend';
 /**
  * RESEND API INTEGRATION
  * 
@@ -12,6 +12,7 @@ import { BookingState, EXTRA_TASKS } from './type';
  * Below is the structured logic and detailed HTML body for your emails.
  */
 
+const resend = new Resend(process.env.RESEND_API_KEY);  
 export const sendBookingEmail = async (data: BookingState, totalPrice: number) => {
   // --- CONFIGURATION SECTION ---
   // 1. INSERT YOUR RESEND API KEY HERE (If calling from a backend environment)
