@@ -1,6 +1,20 @@
 import { BookingState, EXTRA_TASKS } from './type';
 import { Resend } from 'resend';
+<<<<<<< HEAD
+=======
+/**
+ * RESEND API INTEGRATION
+ * 
+ * To make this functional on Vercel:
+ * 1. Create a Vercel Serverless Function (e.g., /api/send-booking.ts).
+ * 2. Use the 'resend' npm package on the backend.
+ * 3. Use the environment variable process.env.RESEND_API_KEY.
+ * 
+ * Below is the structured logic and detailed HTML body for your emails.
+ */
+>>>>>>> 8375f0f3a52e2371917f845cc19e287e6bc6addb
 
+const resend = new Resend(process.env.RESEND_API_KEY);  
 export const sendBookingEmail = async (data: BookingState, totalPrice: number) => {
   // ✅ Fix: ensure API key exists
   const apiKey = process.env.RESEND_API_KEY;

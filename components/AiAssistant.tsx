@@ -3,7 +3,11 @@ import React from 'react';
 const AiAssistant: React.FC = () => {
   // CONFIGURATION
   // Replace with your actual number (format: +44 131 666 6666)
+<<<<<<< HEAD
   const phoneNumber = "+44 7878 654634"; 
+=======
+  const phoneNumber = "+44 131 666 6666"; 
+>>>>>>> 8375f0f3a52e2371917f845cc19e287e6bc6addb
   const welcomeMessage = "Hello MetroSecure, I would like to inquire about your services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(welcomeMessage)}`;
 
