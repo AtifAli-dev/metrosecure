@@ -11,7 +11,7 @@ export default async function handler(req: any, res: any) {
     const { fullName, email, phone, service, message } = req.body;
 
     await resend.emails.send({
-      from: "Control Room<control@metrosecure.co.uk>",
+      from: "Website Contact <onboarding@resend.dev>",
       to: ["control@metrosecure.co.uk"],
       subject: `New Inquiry – ${service}`,
       replyTo: email,
