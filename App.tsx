@@ -5,9 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import SecurityServices from './pages/SecurityServices';
-import CleaningServices from './pages/CleaningServices'; // Main selection page
-import DomesticCleaning from './pages/DomesticCleaning'; // New separate page
-import CommercialCleaning from './pages/CommercialCleaning'; // New separate page
+import CleaningServices from './pages/CleaningServices';
 import Areas from './pages/Areas';
 import Contact from './pages/Contact';
 import AiAssistant from './components/AiAssistant';
@@ -26,7 +24,7 @@ const App: React.FC = () => {
       <div className="flex flex-col min-h-screen font-body">
         <ScrollToTop />
         <Navbar />
-        <main className="flex-grow pt-16">
+        <main className="flex-grow pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -34,8 +32,7 @@ const App: React.FC = () => {
             
             {/* Cleaning Routes */}
             <Route path="/cleaning" element={<CleaningServices />} />
-            <Route path="/cleaning/domestic" element={<DomesticCleaning />} />
-            <Route path="/cleaning/commercial" element={<CommercialCleaning />} />
+            <Route path="/cleaning/commercial" element={<CleaningServices />} />
             
             <Route path="/areas" element={<Areas />} />
             <Route path="/contact" element={<Contact />} />

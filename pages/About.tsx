@@ -117,9 +117,8 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl font-black mb-8 font-heading">Our Vision</h2>
-            <p className="text-xl leading-relaxed opacity-90 italic">
-              "To be the premier UK partner for facilities management, setting the benchmark for security and cleanliness 
-              through innovation, integrity, and unparalleled workforce excellence."
+            <p className="text-xl md:text-2xl leading-relaxed opacity-95 italic font-light">
+              "To be the foundation of operational excellence, transforming how businesses secure, clean, and manage their facilities through elite talent solutions."
             </p>
           </div>
         </div>

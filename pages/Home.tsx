@@ -4,22 +4,22 @@ import { Shield, Zap, Clock, Users, CheckCircle, Heart, Repeat, Handshake } from
 
 const carouselItems = [
   {
-    image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=1600&h=900&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1600&h=900&auto=format&fit=crop',
+    title: 'Staffing solution',
+    description: 'We deliver vetted, reliable workforce solutions for the FM sector. From professional janitorial staff to trained security personnel, we connect your business with talent that keeps your facilities safe and spotless.',
+    link: '/security',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1600&h=900&auto=format&fit=crop',
     title: 'Manned Security Services',
     description: 'Reliable, fully trained officers standing ready to shield your business and assets.',
-    link: '/security', // ✅ Link to security page
+    link: '/security',
   },
   {
-    image: 'https://res.cloudinary.com/dyb9eyvex/image/upload/v1767695516/deomostic_cleaning_a7kwly.png',
-    title: 'Domestic Cleaning',
-    description: 'Trusted, screened professionals dedicated to turning your home into a peaceful sanctuary.',
-    link: '/cleaning', // ✅ Link to cleaning page
-  },
-  {
-    image: 'https://res.cloudinary.com/dyb9eyvex/image/upload/v1767699829/commerical_cleaning_pa9ycr.png',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&h=900&auto=format&fit=crop',
     title: 'Commercial Cleaning',
     description: 'Highly trained experts creating an attractive, hygienic, and secure environment for your brand.',
-    link: '/cleaning', // ✅ You can change this to a separate commercial cleaning page if you have one
+    link: '/cleaning',
   },
 ];
 
@@ -29,14 +29,14 @@ const Home: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-    }, 3000);
+    }, 4500);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="overflow-hidden">
       {/* Hero Section Carousel */}
-      <section className="relative h-[80vh] top-6 w-full overflow-hidden">
+      <section className="relative h-[80vh] md:h-[85vh] w-full overflow-hidden">
         {carouselItems.map((item, index) => (
           <div
             key={index}
@@ -45,18 +45,18 @@ const Home: React.FC = () => {
             }`}
           >
             <div 
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-[3000ms] ease-out scale-110"
-              style={{ backgroundImage: `url('${item.image}')`, transform: index === currentSlide ? 'scale(1)' : 'scale(1.1)' }}
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-[4500ms] ease-out scale-110"
+              style={{ backgroundImage: `url('${item.image}')`, transform: index === currentSlide ? 'scale(1)' : 'scale(1.08)' }}
             >
-              <div className="absolute inset-0 bg-secondary/40" />
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/70 to-secondary/40" />
             </div>
             
             {/* Realignment: Heading and Paragraph now Left-aligned, Heading is Primary color */}
             <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-start text-left">
-              <h1 className="text-4xl md:text-6xl font-black text-primary mb-6 font-heading drop-shadow-lg leading-tight">
+              <h1 className="text-4xl md:text-6xl font-black text-primary mb-6 font-heading drop-shadow-lg leading-tight max-w-2xl">
                 {item.title}
               </h1>
-              <p className="text-xl md:text-2xl text-white max-w-xl mb-8 font-light drop-shadow-md">
+              <p className="text-xl md:text-2xl text-white max-w-2xl mb-8 font-light drop-shadow-md leading-relaxed">
                 {item.description}
               </p>
               <Link

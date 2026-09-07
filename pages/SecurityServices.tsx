@@ -4,31 +4,31 @@ import { Link } from 'react-router-dom';
 
 const securityServices = [
   {
-    title: 'Event Security',
+    title: 'Door Supervision',
+    description: 'MetroSecure offers door supervision services for licensed premises, venues, and events. Services are delivered by appropriately SIA-licensed door supervisors, supporting access control, venue safety, and customer management in line with legal obligations.',
+    image: 'https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?q=80&w=800&h=600&auto=format&fit=crop',
+    layout: 'right'
+  },
+  {
+    title: 'Event Security & Stewarding',
     description: 'MetroSecure provides professional event stewards to support the safe and efficient operation of events of all sizes. Our teams assist with crowd guidance, access coordination, and visitor support, helping to maintain an organised, controlled, and welcoming environment.',
     image: 'https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?q=80&w=800&h=600&auto=format&fit=crop',
-    layout: 'right'
+    layout: 'left'
   },
   {
     title: 'Traffic Marshals',
     description: 'We supply trained traffic and car park marshals to manage vehicle movement and parking at events, venues, and commercial sites. Our marshals help reduce congestion, improve traffic flow, and support pedestrian safety in high-traffic environments.',
-    image: 'https://images.unsplash.com/photo-1518086054817-21a4155986fc?q=80&w=800&h=600&auto=format&fit=crop',
-    layout: 'left'
+    image: 'https://images.unsplash.com/photo-1508873696983-2df5703bc20d?q=80&w=800&h=600&auto=format&fit=crop',
+    layout: 'right'
   },
   {
     title: 'Front-of-House Security Support',
     description: 'MetroSecure offers front-of-house security personnel for receptions, entrances, and public-facing areas. Our staff assist with visitor sign-in, provide guidance, and maintain a visible, professional presence that supports both security and customer experience.',
-    image: 'https://images.unsplash.com/photo-1582653280643-e79c79219b19?q=80&w=800&h=600&auto=format&fit=crop',
-    layout: 'right'
-  },
-  {
-    title: 'Corporate Concierge Services',
-    description: 'We provide concierge services for corporate offices and residential developments, combining security awareness with a customer-focused approach. Our personnel support site management through professional communication, consistency, and attention to detail.',
-    image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=800&h=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&h=600&auto=format&fit=crop',
     layout: 'left'
   },
   {
-    title: 'Site Observation & Monitoring Staff',
+    title: 'Site Observation & CCTV Monitoring Staff',
     description: 'We supply site observation personnel to support asset protection and situational awareness. Duties include monitoring activity, recording incidents, and reporting concerns, providing added oversight without direct physical intervention.',
     image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&h=600&auto=format&fit=crop',
     layout: 'right'
@@ -36,20 +36,14 @@ const securityServices = [
   {
     title: 'Retail Presence Staff',
     description: 'MetroSecure supplies retail presence staff to support loss prevention through visible deterrence, observation, and reporting. Our teams contribute to a safe, professional retail environment while maintaining positive engagement with customers and staff.',
-    image: 'https://images.unsplash.com/photo-1601599561213-832382fd07ba?q=80&w=800&h=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=800&h=600&auto=format&fit=crop',
     layout: 'left'
   },
   {
     title: 'Security Guarding',
     description: 'We provide security guarding services to protect people, property, and premises. Where licensable activity is required, guarding services are delivered by fully SIA-licensed security officers, operating in accordance with site instructions, risk assessments, and UK regulatory requirements.',
-    image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&h=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=800&h=600&auto=format&fit=crop',
     layout: 'right'
-  },
-  {
-    title: 'Door Supervision',
-    description: 'MetroSecure offers door supervision services for licensed premises, venues, and events. Services are delivered by appropriately SIA-licensed door supervisors, supporting access control, venue safety, and customer management in line with legal obligations.',
-    image: 'https://images.unsplash.com/photo-1549413243-7c390500735d?q=80&w=800&h=600&auto=format&fit=crop',
-    layout: 'left'
   }
 ];
 

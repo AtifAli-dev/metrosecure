@@ -29,15 +29,20 @@ const Navbar: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0  left-0 right-0 z-50 transition-all duration-300   ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/95 py-4'
+      className={`fixed top-0 left-0 right-0 h-20 z-50 transition-all duration-200 bg-white/95 backdrop-blur-md ${
+        isScrolled ? 'shadow-md border-b border-gray-100' : 'border-b border-transparent'
       }`}
     >
-      <div className="max-w-7xl h-16 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+      <div className="max-w-7xl h-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-full">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-            <img src="https://res.cloudinary.com/dyb9eyvex/image/upload/v1767172551/metrosecurelogo_qduvye.png" alt="Logo" className="h-16 w-auto"/>
+          <Link to="/" className="flex items-center space-x-2 py-1" onClick={() => setIsOpen(false)}>
+            <img 
+              src="https://res.cloudinary.com/dyb9eyvex/image/upload/v1767172551/metrosecurelogo_qduvye.png" 
+              alt="MetroSecure Logo" 
+              className="h-14 w-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -61,7 +61,9 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-secondary">Phone</h4>
-                      <p className="text-gray-600">+44 7878 654634</p>
+                      <a href="tel:+447908540089" className="text-gray-600 hover:text-primary transition-colors font-medium">
+                        +44 7908 540089
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -151,9 +153,10 @@ const Contact: React.FC = () => {
                           name="service"
                           className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white"
                         >
-                          <option>Security Services</option>
-                          <option>Domestic Cleaning</option>
-                          <option>Commercial Cleaning</option>
+                          <option>Security Services (Door Supervision, Guarding, Events)</option>
+                          <option>Commercial Cleaning (Offices, Warehouses, Retail)</option>
+                          <option>Facilities Management & Workforce Staffing</option>
+                          <option>Emergency Short-Notice Cover</option>
                           <option>Other / General Inquiry</option>
                         </select>
                       </div>

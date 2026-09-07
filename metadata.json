@@ -4,5 +4,8 @@
   "description": "A professional UK-based services brand website for security and cleaning operations, featuring responsive design, corporate aesthetics, and an AI-powered assistant.",
   "requestFramePermissions": [
     "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]
 }
